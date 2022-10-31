@@ -1,0 +1,10 @@
+<div class="card-body">
+  <form>
+    <div class="form-group">
+      <label for="messageInputBox">Wprowadź tekst swojej wiadomości</label>
+      <textarea class="form-control form-control-area" id="messageInputBox" rows="6"
+        [(ngModel)]="this.appService.message.content" [ngModelOptions]="{standalone: true}"></textarea>
+    </div>
+  </form>
+  <button class="btn btn-primary btn-block" type="button" (click)="this.appService.sendMessage()">Wyślij</button>
+</div>

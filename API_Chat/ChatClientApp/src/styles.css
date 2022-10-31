@@ -1,0 +1,112 @@
+/* You can add global styles to this file, and also import other style files */
+.page {
+  position: relative;
+  width: 95vw;
+  margin: auto;
+}
+
+.card {
+  margin: auto;
+  margin-top: 10px;
+  width: 80vw;
+}
+
+.card-body-scroll {
+  overflow: auto;
+  height: 15eM;
+}
+
+.card-body-bottom-border {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0, 0, 0, 0.176);
+
+}
+
+.btn-block {
+  margin-top: 5px;
+  width: 99.9%;
+}
+
+.btn-form {
+  margin-top: 1eM;
+  margin-bottom: 1eM;
+}
+
+.btn-radio-none {
+  display: none;
+}
+
+.btn-radio {
+  width: 8vw;
+}
+
+.form-control-options {
+  height: 12.6em;
+}
+
+.form-control-scroll {
+  overflow: auto;
+}
+
+.form-control-area {
+  resize: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.li-message {
+  width: 60%;
+  list-style: none;
+}
+
+.li-message-author {
+  float: left;
+}
+
+.li-message-recipient {
+  float: right;
+}
+
+.p-message {
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.p-message-author {
+  background-color: #cce0ff;
+}
+
+.p-message-recipient {
+  background-color: #e7e7e7;
+}
+
+.p-text-centered {
+  text-align: center;
+}
+
+.div-table {
+  display: table;
+}
+
+.span-align-middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.span-text-centered {
+  display: table;
+  margin: 0 auto;
+  width: 60vw;
+  text-align: center;
+}
+
+.margin-right-5 {
+  margin-right: 5%;
+}
+
+#passwordHelp {
+  margin-left: 5px;
+}

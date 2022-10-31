@@ -1,0 +1,35 @@
+<div class="card-body">
+  <p class="card-text">Wypełnij formularz, aby się zarejestrować.</p>
+  <form class="form">
+    <div class="form-group">
+      <label>Email:</label>
+      <input class="form-control" placeholder="Wprowadź login" [(ngModel)]="this.appService.userRegisterDto.email"
+        [ngModelOptions]="{standalone: true}" (keydown.enter)="this.appService.register()">
+    </div>
+    <div class="form-group">
+      <label>Imię:</label>
+      <input class="form-control" placeholder="Wprowadź imię" [(ngModel)]="this.appService.userRegisterDto.firstName"
+        [ngModelOptions]="{standalone: true}" (keydown.enter)="this.appService.register()">
+    </div>
+    <div class="form-group">
+      <label>Nazwisko:</label>
+      <input class="form-control" placeholder="Wprowadź nazwisko" [(ngModel)]="this.appService.userRegisterDto.lastName"
+        [ngModelOptions]="{standalone: true}" (keydown.enter)="this.appService.register()">
+    </div>
+    <div class="form-group">
+      <label>Numer telefonu:</label>
+      <input class="form-control" placeholder="Wprowadź numer telefonu" [(ngModel)]="this.appService.userRegisterDto.phoneNumber"
+        [ngModelOptions]="{standalone: true}" (keydown.enter)="this.appService.register()">
+    </div>
+    <div class="form-group">
+      <label>Hasło:</label>
+      <input type="password" autocomplete="on" class="form-control" placeholder="Wprowadź hasło"
+        [(ngModel)]="this.appService.userRegisterDto.password" [ngModelOptions]="{standalone: true}" (keydown.enter)="this.appService.register()">
+        <small id="passwordHelp" class="form-text text-muted">Minimum 8 znaków.</small>
+    </div>
+    <button class="btn btn-primary btn-form" (keydown.enter)="this.appService.register()" (click)="this.appService.register()">Rejestracja</button>
+  </form>
+  <p class="card-text">Masz już konto?
+    <a [routerLink]="" class="card-link cursor-pointer" (click)="this.appService.goToLogin()">Zaloguj się!</a>
+  </p>
+</div>

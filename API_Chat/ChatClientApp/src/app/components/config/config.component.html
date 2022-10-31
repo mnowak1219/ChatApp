@@ -1,0 +1,25 @@
+<div class="card-body card-body-bottom-border">
+  <div class="row ">
+    <span class="card-text align-middle span-align-middle">
+      <span class ="span-text-centered">
+        <span class="margin-right-5">
+          Dodatkowe wysyłanie wiadomości jako e-mail.
+        </span>
+        <span>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-primary btn-radio" [ngClass]="{
+              'active': this.appService.message.emailSending == 1
+            }">
+              <input class="btn-radio-none" type="radio" id="option1" [(ngModel)]="this.appService.message.emailSending" value="1" /> Tak
+            </label>
+            <label class="btn btn-outline-primary btn-radio" [ngClass]="{
+              'active': this.appService.message.emailSending == 0
+            }">
+              <input class="btn-radio-none" type="radio" id="option2" [(ngModel)]="this.appService.message.emailSending" value="0" /> Nie
+            </label>
+          </div>
+        </span>
+      </span>
+    </span>
+  </div>
+</div>

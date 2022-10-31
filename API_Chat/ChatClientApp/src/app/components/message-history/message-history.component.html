@@ -1,0 +1,28 @@
+<div class="text-center">
+  <div class="card-footer">
+    <div class="card-text">
+      <h5>Okno czatu z wybranym użytkownikiem</h5>
+    </div>
+  </div>
+  <div class="card-body card-body-scroll" #scrollMe>
+    <div data-spy="scroll" data-offset="0" >
+      <ul>
+        <li class="li-message" *ngFor="let message of this.appService.messagesList;" [ngClass]="{
+          'li-message-author': message.author === this.appService.message.author,
+          'li-message-recipient': message.author !== this.appService.message.author
+        }">
+          <p class = "p-message" [ngClass]="{
+            'p-message-author': message.author === this.appService.message.author,
+            'p-message-recipient': message.author !== this.appService.message.author
+          }">
+            <b>
+              {{message.author}}
+            </b>
+            <br />
+            {{message.content}}
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

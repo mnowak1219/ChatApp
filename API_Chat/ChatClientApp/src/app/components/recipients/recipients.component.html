@@ -1,0 +1,13 @@
+<div class="card-body">
+  <form>
+    <div class="form-group">
+      <label for="recipient">Wybierz odbiorcę wiadomości</label>
+      <select multiple class="form-control form-control-options form-control-scroll" id="recipient" [(ngModel)]="this.appService.recipient"
+        [ngModelOptions]="{standalone: true}" (ngModelChange)="this.appService.getRecipient($event)">
+        <option *ngFor="let user of this.appService.usersList | sorted" [value]="user.firstName + ';' + user.lastName + ';' + user.email" >
+          {{user.firstName}} {{user.lastName}} <i>({{user.email}})</i>
+        </option>
+      </select>
+    </div>
+  </form>
+</div>

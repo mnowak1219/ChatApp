@@ -1,0 +1,21 @@
+<div class="card-body">
+    <p class="card-text p-text-centered ">Zaloguj się aby kontynuować.</p>
+  <form class="form">
+    <div class="form-group">
+      <label>Email:</label>
+      <input class="form-control" placeholder="Wprowadź login" [(ngModel)]="this.appService.userLoginDto.email"
+        [ngModelOptions]="{standalone: true}" (keydown.enter)="this.appService.login()">
+    </div>
+    <div class="form-group">
+      <label>Hasło:</label>
+      <input type="password" autocomplete="on" class="form-control" placeholder="Wprowadź hasło"
+        [(ngModel)]="this.appService.userLoginDto.password" [ngModelOptions]="{standalone: true}"
+        (keydown.enter)="this.appService.login()">
+    </div>
+    <button class="btn btn-primary btn-form" (keydown.enter)="this.appService.login()"
+      (click)="this.appService.login()">Zaloguj się</button>
+  </form>
+  <p class="card-text">Nie masz jeszcze konta?
+    <a [routerLink]="" class="card-link cursor-pointer" (click)="this.appService.goToRegister()">Zarejestruj się!</a>
+  </p>
+</div>
